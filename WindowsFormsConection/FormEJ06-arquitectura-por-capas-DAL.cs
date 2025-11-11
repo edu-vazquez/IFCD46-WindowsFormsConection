@@ -14,31 +14,23 @@ namespace WindowsFormsConection
 
     public partial class FormEJ06_arquitectura_por_capas_DAL : Form
     {
-        string connectionString;
-        SqlConnection connection;
-
+        DbConnect coneccionBDEmployees;
         public FormEJ06_arquitectura_por_capas_DAL()
         {
             InitializeComponent();
 
-            var csb = new SqlConnectionStringBuilder
-            {
-                DataSource = "187.33.155.14,54321",
-                InitialCatalog = "EduardoEmployees",
-                UserID = "sa",
-                Password = Program.Password
-            };
-            connectionString = csb.ConnectionString;
-            connection = new SqlConnection(connectionString);
+            // Crear objeto de conexion y guardarlo en una variable de clase
+            coneccionBDEmployees = new DbConnect();
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
             try
             {
-                connection.Open();
+                coneccionBDEmployees.Open();
                 tbxEstadoDeConeccion.Text = "Conectado";
-                if (connection.State == ConnectionState.Open)
+                //verificar estado de coneccion con el metodo GetConnectionState
+                if (coneccionBDEmployees.GetConnectionState() == ConnectionState.Open)
                     tbxEstadoDeConeccion.BackColor = Color.LightGreen;
             }
             catch (Exception ex)
@@ -49,46 +41,21 @@ namespace WindowsFormsConection
 
         private void btnDesconectar_Click(object sender, EventArgs e)
         {
-            connection.Close();
-            tbxEstadoDeConeccion.Text = "Desconectado";
-            tbxEstadoDeConeccion.BackColor = Color.LightCoral;
-        }
-
-        private void Insertar(Jobs job)
-        {
-            string sql = $@"INSERT INTO jobs(job_title, min_salary, max_salary) 
-                VALUES('@jobTitle', @min_salary, @max_salary)";
-
             try
-            {
-                using (SqlCommand command = new SqlCommand(sql, connection))
-                {
-                    command.Parameters.AddWithValue("@title", job.jobTitle ?? (object)DBNull.Value);
-                    command.Parameters.AddWithValue("@min", job.min_salary ?? (object)DBNull.Value);
-                    command.Parameters.AddWithValue("@max", job.max_salary ?? (object)DBNull.Value);
-
-                    if (connection.State != ConnectionState.Open)
-                        connection.Open();
-
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Registro insertado correctamente ✅");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error SQL: " + ex.Message);
+            { 
+                coneccionBDEmployees.Close();
+                tbxEstadoDeConeccion.Text = "Desconectado";
+                //verificar estado de coneccion con el metodo GetConnectionState
+                if (coneccionBDEmployees.GetConnectionState() == ConnectionState.Closed)
+                    tbxEstadoDeConeccion.BackColor = Color.LightCoral;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error al desconectar: " + ex.Message);
             }
-            finally
-            {
-                // Si prefieres que este método cierre la conexión:
-                // if (connection.State == ConnectionState.Open) connection.Close();
-            }
-
         }
+
+        
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
@@ -98,7 +65,8 @@ namespace WindowsFormsConection
                 string.IsNullOrEmpty(tbxMinSalary.Text) ? (decimal?)null : decimal.Parse(tbxMinSalary.Text),
                 string.IsNullOrEmpty(tbxMaxSalary.Text) ? (decimal?)null : decimal.Parse(tbxMaxSalary.Text)
             );
-            Insertar(job);
+
+            DALJob.Insertar(job, coneccionBDEmployees);
         }
     }
 }

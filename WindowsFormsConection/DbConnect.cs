@@ -9,12 +9,17 @@ namespace WindowsFormsConection
         public string ConnectionString { get; }
         public SqlConnection Connection { get; }
 
+        public ConnectionState GetConnectionState()
+        {
+            return Connection.State;
+        }
+
         // Constructor con parametros con valores por defecto
         public DbConnect(
             string dataSource = "187.33.155.14,54321",
             string initialCatalog = "EduardoEmployees",
             string userId = "sa",
-            string password = null) 
+            string password = null)
         {
             // Establecer la "cadena" de conexion usando SqlConnectionStringBuilder
             var dbConnectionBuilder = new SqlConnectionStringBuilder
@@ -47,3 +52,6 @@ namespace WindowsFormsConection
 
     }
 }
+
+
+

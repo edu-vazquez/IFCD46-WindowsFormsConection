@@ -96,6 +96,7 @@
             this.btnInsertar.TabIndex = 28;
             this.btnInsertar.Text = "Insertar Datos";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // tbxEstadoDeConeccion
             // 
@@ -117,6 +118,7 @@
             this.btnDesconectar.TabIndex = 25;
             this.btnDesconectar.Text = "Desconectar";
             this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // btnConectar
             // 
@@ -126,6 +128,7 @@
             this.btnConectar.TabIndex = 26;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // FormEJ06_arquitectura_por_capas_DAL
             // 
