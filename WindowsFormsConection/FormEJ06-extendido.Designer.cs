@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsConection
 {
-    partial class FormEJ06_arquitectura_por_capas_DAL
+    partial class FormEJ06_extendido
     {
         /// <summary>
         /// Required designer variable.
@@ -41,78 +41,78 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 150);
+            this.label3.Location = new System.Drawing.Point(31, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 32;
+            this.label3.TabIndex = 42;
             this.label3.Text = "Max Salary";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 124);
+            this.label2.Location = new System.Drawing.Point(31, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 33;
+            this.label2.TabIndex = 43;
             this.label2.Text = "Min Salary";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 98);
+            this.label1.Location = new System.Drawing.Point(31, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 34;
+            this.label1.TabIndex = 44;
             this.label1.Text = "Job Title";
             // 
             // tbxMaxSalary
             // 
-            this.tbxMaxSalary.Location = new System.Drawing.Point(98, 147);
+            this.tbxMaxSalary.Location = new System.Drawing.Point(96, 137);
             this.tbxMaxSalary.Name = "tbxMaxSalary";
             this.tbxMaxSalary.Size = new System.Drawing.Size(218, 20);
-            this.tbxMaxSalary.TabIndex = 29;
+            this.tbxMaxSalary.TabIndex = 39;
             // 
             // tbxMinSalary
             // 
-            this.tbxMinSalary.Location = new System.Drawing.Point(98, 121);
+            this.tbxMinSalary.Location = new System.Drawing.Point(96, 111);
             this.tbxMinSalary.Name = "tbxMinSalary";
             this.tbxMinSalary.Size = new System.Drawing.Size(218, 20);
-            this.tbxMinSalary.TabIndex = 30;
+            this.tbxMinSalary.TabIndex = 40;
             // 
             // tbxJobTitle
             // 
-            this.tbxJobTitle.Location = new System.Drawing.Point(98, 95);
+            this.tbxJobTitle.Location = new System.Drawing.Point(96, 85);
             this.tbxJobTitle.Name = "tbxJobTitle";
             this.tbxJobTitle.Size = new System.Drawing.Size(218, 20);
-            this.tbxJobTitle.TabIndex = 31;
+            this.tbxJobTitle.TabIndex = 41;
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(27, 181);
+            this.btnInsertar.Location = new System.Drawing.Point(25, 171);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(289, 39);
-            this.btnInsertar.TabIndex = 28;
+            this.btnInsertar.TabIndex = 38;
             this.btnInsertar.Text = "Insertar Datos";
             this.btnInsertar.UseVisualStyleBackColor = true;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
+            this.btnInsertar.Click += new System.EventHandler(this.BtnInsertar_Click);
             // 
             // tbxEstadoDeConeccion
             // 
             this.tbxEstadoDeConeccion.BackColor = System.Drawing.Color.LightCoral;
             this.tbxEstadoDeConeccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxEstadoDeConeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEstadoDeConeccion.Location = new System.Drawing.Point(27, 30);
+            this.tbxEstadoDeConeccion.Location = new System.Drawing.Point(25, 43);
             this.tbxEstadoDeConeccion.Name = "tbxEstadoDeConeccion";
             this.tbxEstadoDeConeccion.Size = new System.Drawing.Size(289, 23);
-            this.tbxEstadoDeConeccion.TabIndex = 27;
+            this.tbxEstadoDeConeccion.TabIndex = 37;
             this.tbxEstadoDeConeccion.Text = "Desconectado";
             this.tbxEstadoDeConeccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // FormEJ06_arquitectura_por_capas_DAL
+            // FormEJ06_extendido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 450);
+            this.ClientSize = new System.Drawing.Size(351, 564);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -121,8 +121,8 @@
             this.Controls.Add(this.tbxJobTitle);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.tbxEstadoDeConeccion);
-            this.Name = "FormEJ06_arquitectura_por_capas_DAL";
-            this.Text = "FormEJ06 Extendido";
+            this.Name = "FormEJ06_extendido";
+            this.Text = "FormEJ06_extendido";
             this.ResumeLayout(false);
             this.PerformLayout();
 

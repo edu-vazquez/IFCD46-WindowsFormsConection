@@ -52,5 +52,11 @@ namespace WindowsFormsConection
             var formConection = new FormEJ06_arquitectura_por_capas_DAL();
             formConection.Show();
         }
+
+        private void btnEJ06Extendido_Click(object sender, EventArgs e)
+        {
+            var formConection = new FormEJ06_extendido();
+            formConection.Show();
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.btnEJ05 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnEJ06Extendido = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +81,7 @@
             // 
             // btnEJ04
             // 
-            this.btnEJ04.Location = new System.Drawing.Point(370, 127);
+            this.btnEJ04.Location = new System.Drawing.Point(406, 127);
             this.btnEJ04.Name = "btnEJ04";
             this.btnEJ04.Size = new System.Drawing.Size(178, 36);
             this.btnEJ04.TabIndex = 1;
@@ -90,7 +91,7 @@
             // 
             // btnEJ05
             // 
-            this.btnEJ05.Location = new System.Drawing.Point(370, 230);
+            this.btnEJ05.Location = new System.Drawing.Point(406, 230);
             this.btnEJ05.Name = "btnEJ05";
             this.btnEJ05.Size = new System.Drawing.Size(178, 36);
             this.btnEJ05.TabIndex = 1;
@@ -100,7 +101,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(370, 350);
+            this.button1.Location = new System.Drawing.Point(406, 350);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 36);
             this.button1.TabIndex = 1;
@@ -111,18 +112,29 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(367, 334);
+            this.label2.Location = new System.Drawing.Point(403, 334);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Arquitectura por capas / DAL";
             // 
+            // btnEJ06Extendido
+            // 
+            this.btnEJ06Extendido.Location = new System.Drawing.Point(742, 127);
+            this.btnEJ06Extendido.Name = "btnEJ06Extendido";
+            this.btnEJ06Extendido.Size = new System.Drawing.Size(178, 36);
+            this.btnEJ06Extendido.TabIndex = 1;
+            this.btnEJ06Extendido.Text = "EJERCICIO 06 Extendido";
+            this.btnEJ06Extendido.UseVisualStyleBackColor = true;
+            this.btnEJ06Extendido.Click += new System.EventHandler(this.btnEJ06Extendido_Click);
+            // 
             // FormStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 450);
+            this.ClientSize = new System.Drawing.Size(980, 450);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnEJ06Extendido);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEJ05);
             this.Controls.Add(this.btnEJ04);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button btnEJ05;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnEJ06Extendido;
     }
 }

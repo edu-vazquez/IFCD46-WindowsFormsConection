@@ -42,7 +42,7 @@ namespace WindowsFormsConection
         private void btnDesconectar_Click(object sender, EventArgs e)
         {
             try
-            { 
+            {
                 coneccionBDEmployees.Close();
                 tbxEstadoDeConeccion.Text = "Desconectado";
                 //verificar estado de coneccion con el metodo GetConnectionState
@@ -54,8 +54,6 @@ namespace WindowsFormsConection
                 MessageBox.Show("Error al desconectar: " + ex.Message);
             }
         }
-
-        
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {

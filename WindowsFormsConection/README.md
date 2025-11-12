@@ -8,6 +8,7 @@
 
 - Definir la cadena de conexión, con los 4 parametros de acceso
 
+
 2a parte
 
 - Añadir un metodo Insertar()
@@ -47,11 +48,10 @@ https://es.wikipedia.org/wiki/Inyecci%C3%B3n_SQL
 
 - Usar parametros
 
-- - Separación en capas
+- Separación en capas
 
 - Clases DAL y Modelos
 
- 
 Separar las capas en el proyecto que tenemos:
 
 - Crear carpetas /Modelo y /DAL
@@ -64,8 +64,6 @@ Separar las capas en el proyecto que tenemos:
 
 - Añadir el uso de DBConnect en vez de SqlConnection: crear objeto DBConnect, llamar a Open antes, y CLose después de ejecutar la acción
 
- 
-
 Extensión del proyecto:
 
 - Añadir control para mostar una lista de jobs + botón Cargar
@@ -76,11 +74,6 @@ Extensión del proyecto:
 
 - Permitir modificar un job existente, y guardarlo en la BD
 
- 
-
- 
-
- 
 
 6a parte
 

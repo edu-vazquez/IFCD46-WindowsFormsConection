@@ -6,15 +6,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsConection
 {
-    internal class DALJob
+    internal class DALJobWithConnection
     {
          static public void Insertar(Jobs job, DbConnect connection)
         {
+            DbConnect DAlJobConnection = connection;
+
             string sql = $@"INSERT INTO jobs(job_title, min_salary, max_salary) 
                 VALUES(@jobTitle, @min_salary, @max_salary)";
 
             try
             {
+                connection.Open();
                 using (SqlCommand command = new SqlCommand(sql, connection.Connection))
                 {
                     command.Parameters.AddWithValue("@jobTitle", job.jobTitle ?? (object)DBNull.Value);
@@ -28,13 +31,18 @@ namespace WindowsFormsConection
                     MessageBox.Show("Registro insertado correctamente ✅");
                 }
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
-                MessageBox.Show("Error SQL: " + ex.Message);
+                //el throw vuelve a lanzar la excepcion para que sea manejada en un nivel superior
+                throw;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                throw;
+            }
+            finally
+            {
+                connection.Close();
             }
 
 

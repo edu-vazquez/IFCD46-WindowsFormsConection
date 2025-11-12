@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DALJob-con-coneccion.cs" />
     <Compile Include="DAL\DALJob.cs" />
     <Compile Include="DAL\DbConnect.cs" />
     <Compile Include="FormEJ05.cs">
@@ -59,6 +60,12 @@
     </Compile>
     <Compile Include="FormEJ06-arquitectura-por-capas-DAL.Designer.cs">
       <DependentUpon>FormEJ06-arquitectura-por-capas-DAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEJ06-extendido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEJ06-extendido.Designer.cs">
+      <DependentUpon>FormEJ06-extendido.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Jobs.cs" />
     <Compile Include="FormEJ01.cs">
@@ -110,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEJ06-arquitectura-por-capas-DAL.resx">
       <DependentUpon>FormEJ06-arquitectura-por-capas-DAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEJ06-extendido.resx">
+      <DependentUpon>FormEJ06-extendido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStart.resx">
       <DependentUpon>FormStart.cs</DependentUpon>
